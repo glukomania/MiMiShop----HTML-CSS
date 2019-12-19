@@ -1,0 +1,43 @@
+{
+  "name": "mishkashop----html-css",
+  "version": "1.0.0",
+  "description": "Study project",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "babel-loader": "^8.0.6",
+    "prop-types": "15.7.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-redux": "7.1.3",
+    "react-router-dom": "5.1.2",
+    "redux": "4.0.4",
+    "webpack": "^4.41.3",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.0"
+  },
+  "devDependencies": {
+    "babel-jest": "24.9.0",
+    "css-loader": "^3.4.0",
+    "enzyme": "3.10.0",
+    "enzyme-adapter-react-16": "1.15.1",
+    "jest": "24.9.0",
+    "less-loader": "^5.0.0",
+    "react-test-renderer": "16.12.0",
+    "style-loader": "^1.0.2"
+  },
+  "scripts": {
+    "test": "npm run eslint && jest",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glukomania/MishkaShop----HTML-CSS.git"
+  },
+  "author": "Natalia Shuvaeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glukomania/MishkaShop----HTML-CSS/issues"
+  },
+  "homepage": "https://github.com/glukomania/MishkaShop----HTML-CSS#readme"
+}
