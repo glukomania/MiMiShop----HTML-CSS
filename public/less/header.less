@@ -14,13 +14,14 @@
 }
 
 .header-slogan {
-  margin: auto;
+  margin: 70px auto;
+  width: 300px;
+  
+  text-align: center;
   font-size: 27px;
+  font-family: AvenirBlack;
   font-style: bold;
   line-height: 40px;
-  padding: 30px;
-  text-align: center;
-  font-family: AvenirBlack;
 }
 
 .header-categories {
@@ -28,11 +29,17 @@
   padding: 0;
   margin: 0;
 }
+
 .categories {
   display: flex;
   height: 100px;
   background-color: #63d1bb;
   border: 1px dashed #56c3b2;
+  margin-bottom: -10px;
+}
+
+.categories:hover {
+  background-color: #56c3b2;
 }
 
 .category-text__wrapper {
@@ -63,4 +70,50 @@
   height: 50px;
   opacity: 0.1;
   padding: 25px;
+}
+
+.header-zigzag {
+}
+
+@media (min-width: @tablet-width) {
+
+  .header-wrapper {
+    height: 734px;
+    margin-bottom: -102px;
+  }
+
+  .header-slogan {
+    margin: 160px auto;
+    font-size: 43px;
+    color: black;
+    width: 500px;
+    line-height: 55px;
+  }
+
+  .header-categories {
+    position: flex;
+    margin: 0;
+  }
+
+  .categories-wrapper {
+    display: flex;
+    margin: 0 auto;
+    width: 665px;
+    z-index: 1;
+  }
+
+  .categories {
+    width: 50%;
+    z-index: 2;
+  }
+
+  .header-zigzag {
+    position: absolute;
+    top: 804px;
+    left: 0;
+    content: url("../img/zigzag.png");
+    width: 100%;
+    z-index: 2;
+  }
+
 }
