@@ -1,0 +1,153 @@
+.page-offer {
+  margin: 0;
+  padding: 35px;
+}
+
+.offer-title__name {
+  font-size: 27px;
+  font-family: AvenirBlack;
+  color: #303030;
+  line-height: 35px;
+}
+
+.offer-title__type {
+  font-size: 17px;
+  font-family: AvenirBlack;
+  color: #63d1bb;
+  line-height: 25px;
+}
+
+.offer-detailes__description {
+  padding: 30px 0 30px 0;
+}
+
+.detiles-raw {
+  display: flex;
+  border-bottom: 1px solid #d5d5d5;
+  height: 40px;
+  align-items: center;
+}
+
+.detailes-parameter {
+  width: 100px;
+}
+
+.offer-picture {
+  padding-top: 30px;
+  content:url("../img/triple-set-mobile.jpg");
+  width: 100%;
+}
+
+.offer-price__value {
+  text-align: center;
+  font-size: 17px;
+  padding: 25px 0 25px 0;
+}
+
+.order__button {
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid #303030;
+}
+
+.order__button:hover {
+  background-color: #444444;
+  color: white;
+}
+
+.offer-derive {
+  content: url("../img/zigzag_gray.png");
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+
+  .page-offer {
+    margin: 0;
+    padding: 100px 50px 100px 50px;
+  }
+
+  .offer-title {
+    display: flex;
+    padding-bottom: 30px;
+  }
+
+  .offer-title__name {
+    display: flex;
+    width: 80%;
+    line-height: 25px;
+    align-items: center;
+  }
+
+  .offer-title__type {
+    text-align: center;
+    align-items: center;
+  }
+
+  .offer-detailesPicture__wrapper {
+    display: flex;
+  }
+
+  .offer-detailes__description {
+    padding: 0;
+  }
+
+  .offer-detailes {
+    padding-right: 40px; 
+    width: 50%;
+  }
+
+  .offer-picture {
+    width: 50%;
+    padding-top: 0px;
+    content:url("../img/triple-set-tablet.jpg");
+  }
+
+  .offer-price {
+    margin-top: -120px;
+    width: 50%;
+  }
+  .offer-price__order {
+    padding-right: 20px;
+  }
+
+  .offer-derive {
+    content: url("../img/zigzag_gray_desktop.png");
+    width: 100%;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .offer-detailes {
+    margin: 170px 0 0 170px;
+  }
+
+  .offer-title {
+    position: absolute;
+    z-index: 4;
+    top: 950px;
+    left: 65;
+    margin-bottom: -170px;
+  }
+
+  .offer-title__name {
+    font-size: 53px;
+    order: 2;
+  }
+
+  .offer-title__type {
+    width: 140px;
+    padding-right: 30px;
+    order: 1;
+  }
+
+  .offer-picture {
+    width: 50%;
+    padding-top: 0px;
+    content:url("../img/triple-set-desktop.jpg");
+  }
+
+}
