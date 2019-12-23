@@ -1,0 +1,137 @@
+.page-feedbacks {
+  padding: 0 30px 0 30px;
+}
+
+.feedback-button__desktop {
+  display: none;
+}
+
+.feedback-header__text {
+  text-align: left;
+  font-size: 25px;
+  font-family: AvenirBlack;
+  color: #303030;
+  line-height: 35px;
+  padding-bottom: 35px;
+}
+
+.feedback-text {
+  font-size: 15px;
+  padding-bottom: 40px;
+}
+
+.down-author__name {
+  font-size: 17px;
+  font-family: AvenirBlack;  
+}
+
+.down-author__login {
+  color: #444444;
+  font-size: 17px;
+}
+
+.down-arrows {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  border: 1px solid #ececec;
+}
+
+.arrow {
+  width: 50%;
+  margin: 0px;
+  height: 50px;
+}
+
+.down-arrows__left {
+  margin: 10px auto;
+  content: url("../img/arrow_left.png");
+  width: 50px;
+}
+
+.down-arrows__left:hover {
+  content: url("../img/arrow_left_hover.png");
+}
+
+.down-arrows__right {
+  margin: 10px auto;
+  content: url("../img/arrow_right.png");
+  width: 50px;
+}
+
+.down-arrows__right:hover {
+  content: url("../img/arrow_right_hover.png");
+}
+
+@media (min-width: @tablet-width) {
+  .page-feedbacks {
+    background:url("../img/review.jpg") no-repeat;
+    height: 460px;
+  }
+
+  .feedback-header__text {
+    font-size: 43px;
+  }
+  
+  .feedbacks-header {
+    padding-top: 85px;
+    display: flex;
+  }
+
+  .feedback-header__text {
+    width: 80%;
+  }
+
+  .feedback-header__add {
+    width: 20%;
+  }
+
+  .feedback-button__desktop {
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    background-color: white;
+    border: 1px solid #303030;
+  }
+
+  .feedback-button__desktop:hover {
+    background-color: #444444;
+    color: white;
+  }
+  
+  .feedbacks-down__wrapper {
+    display: flex;
+  }
+
+  .down-author {
+    width: 83%;
+  }
+
+  .down-arrows {
+    margin: 30px;
+    width: 17%;
+    display: flex;
+    border: 0;
+  }
+
+  .arrow {
+    width: 50%;
+    margin: 20px;
+  }
+
+  .down-arrows__left {
+    content: url("../img/arrow_left.png");
+    width: 50px;
+  }
+
+  .down-arrows__right {
+    content: url("../img/arrow_right.png");
+    width: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-feedbacks {
+    padding: 0 100px 0 270px;
+  }
+}
