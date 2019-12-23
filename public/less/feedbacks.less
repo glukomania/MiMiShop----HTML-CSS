@@ -1,5 +1,5 @@
 .page-feedbacks {
-  padding: 0 30px 0 30px;
+  padding: 0 30px 30px 30px;
 }
 
 .feedback-button__desktop {
@@ -63,10 +63,24 @@
   content: url("../img/arrow_right_hover.png");
 }
 
+.feedback-button__mobile {
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid #303030;
+}
+
+.feedback-button__mobile:hover {
+  background-color: #444444;
+  color: white;
+}
+
 @media (min-width: @tablet-width) {
   .page-feedbacks {
     background:url("../img/review.jpg") no-repeat;
     height: 460px;
+    margin-bottom: 20px;
   }
 
   .feedback-header__text {
@@ -127,6 +141,10 @@
   .down-arrows__right {
     content: url("../img/arrow_right.png");
     width: 50px;
+  }
+
+  .feedback-button__mobile {
+    display: none;
   }
 }
 

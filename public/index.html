@@ -4,7 +4,7 @@
     <title>Mishka-shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900italic,900' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet/less" type="text/css" href="less/style.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>  
   </head>
@@ -175,7 +175,7 @@
           <div class="feedbacks-header">
             <div class="feedback-header__text">Feedbacks</div>
             <div class="feedback-header__add">
-              <input type="submit" class="feedback-button__desktop" value="WRITE A FEEDBACK" />
+              <input type="button" class="feedback-button__desktop" value="WRITE A FEEDBACK" />
             </div>
           </div>
           <div class="feedback-text">I'm a young mummy, but anyway my posts couldn't 
@@ -195,6 +195,7 @@
                 <div class="down-arrows__right"></div>
               </div>
             </div>
+            <input type="button" class="feedback-button__mobile" value="WRITE A FEEDBACK" />
           </div>
         </div>
       </div>
@@ -202,11 +203,59 @@
       <div class="offer-derive"></div>
 
       <div class="page-contacts">
-
+        <div class="contacts-wrapper">
+          <div class="contacts-details">
+            <div class="detailes-header">
+              <div class="detailes-header__icon">
+                <div class="header-icon"></div>
+              </div>
+              <div class="detailes-header__text">Contacts</div>
+            </div>
+            <div class="detailes wrapper">
+              <div class="detailes-row">
+                <div class="detailes-parameter">
+                  e-mail:
+                </div>
+                <div class="detailes-value">
+                  info@mimishop.com
+                </div>
+              </div>
+              <div class="detailes-row">
+                <div class="detailes-parameter">
+                  address:
+                </div>
+                <div class="detailes-value">
+                  Moskevská 272/55, Praha, Vršovice
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contacts-map"></div>
+        </div>
+        <div class="details-button">
+          <input type="button" class="detailes-button_btn" value="WRITE TO US" />
+        </div>
       </div>
 
       <div class="page-footer">
-        
+        <div class="footer-logo">
+          <div class="footer-logo__image"></div>
+        </div>
+        <div class="footer-social">
+          <div class="footer-social__wrapper">
+            <div class="social-icon">
+              <i class="fa fa-instagram"></i>
+            </div>
+            <div class="social-icon">
+              <i class="fa fa-facebook-square"></i>
+            </div>
+            <div class="social-icon">
+              <i class="fa fa-twitter-square"></i>
+            </div>
+          </div>
+        </div>
+        <div class="footer-derive"></div>
+        <div class="footer-author">Made by <a href="mailto:shuvaeva@email.cz">Feel Studio</a></div>
       </div>
     </div>
     <script src="bundle.js"></script>

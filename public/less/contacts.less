@@ -1,0 +1,144 @@
+.page-contacts{
+  padding: 30px;
+}
+.detailes-header__icon {
+  display: none;
+}
+
+.detailes-header__text {
+  text-align: left;
+  font-size: 18px;
+  font-family: AvenirBlack;
+  color: #303030;
+  line-height: 35px;
+  padding-bottom: 40px;
+}
+
+.detailes-row {
+  color: #444444;
+  font-size: 15px;
+  display: flex;
+  padding-bottom: 40px;
+  line-height: 25px;
+}
+
+.detailes-parameter {
+  width: 30%;
+}
+
+.detailes-value {
+  width: 70%;
+}
+
+.contacts-map {
+  width: 100%;
+  order: 1;
+  content:url("../img/map.png");
+}
+
+.details-button {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.detailes-button_btn{
+  order: 2;
+  width: 100%;
+  padding: 10px;
+  font-size: 17px;
+  background-color: white;
+  border: 1px solid #303030;
+}
+
+.detailes-button_btn:hover {
+  background-color: #444444;
+  color: white; 
+}
+
+@media (min-width: @tablet-width) {
+
+  .detailes-header {
+    display: flex;
+    padding-top: 30px;
+  }
+
+  .detailes-header__icon {
+    display: flex;
+    width: 20%;
+    order: 2;
+  }
+
+  .detailes-header__text {
+    padding-bottom: 20px;
+    width: 80%;
+    font-size: 43px;
+    order: 1;
+  }
+  
+  .header-icon {
+    margin: 0 auto;
+    content:url("../img/flag.png");
+    height: 80px;
+  }
+  
+  .details-button {
+    display: flex;
+    width: 100%;
+  }
+
+  .detailes-button_btn {
+    margin: 70px auto 0 auto;
+    width: 230px;
+  }
+  
+}
+
+
+@media (min-width: @desktop-width) {
+
+  .contacts-wrapper {
+    display: flex;
+  }
+
+  .contacts-details {
+    width: 50%;
+  }
+
+  .contacts-map {
+    width: 50%;
+  }
+
+  .detailes-header {
+    display: flex;
+  }
+
+  .detailes-header__icon {
+    display: flex;
+    width: 20%;
+    order: 2;
+  }
+
+  .detailes-header__text {
+    width: 80%;
+    font-size: 43px;
+    order: 1;
+  }
+  
+  .header-icon {
+    margin: 0 auto;
+    content:url("../img/flag.png");
+    width: 50px;
+  }
+
+  .details-button {
+    margin-top: -110px;
+    display: block;
+    width: 93%;
+  }
+
+  .detailes-button_btn {
+    width: 52%;
+  }
+
+  
+}
