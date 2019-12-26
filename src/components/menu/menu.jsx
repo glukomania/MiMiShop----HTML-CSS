@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 class Menu extends React.PureComponent {
   constructor() {
     super();
@@ -47,8 +49,8 @@ class Menu extends React.PureComponent {
         </div>
       </div>
       <ul className="main-nav__list" ref={this.menuUpperListRef}>
-        <li><a href="catalog.html">Our products</a></li>
-        <li><a href="catalog.html">Knitting by order</a></li>
+        <li><Link to="/catalog">Our products</Link></li>
+        <li><a href="">Knitting by order</a></li>
       </ul>
       <ul className="site__list" ref={this.menuDownListRef}>
         <li><img src="./img/icon_search.png" width="16px"/><a href="catalog.html">&nbsp; &nbsp;Search</a></li>
