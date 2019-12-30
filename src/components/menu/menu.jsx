@@ -37,9 +37,9 @@ class Menu extends React.PureComponent {
       <div className="logo__list">
         <div className="logo-wrapper">
           <div className="logo-wrapper__inner">
-            <a href="#">
+            <Link to="/">
               <div className="logo"></div>
-            </a>
+            </Link>
           </div>
         </div>
         <div className="menu-wrapper">
@@ -50,7 +50,7 @@ class Menu extends React.PureComponent {
       </div>
       <ul className="main-nav__list" ref={this.menuUpperListRef}>
         <li><Link to="/catalog">Our products</Link></li>
-        <li><a href="">Knitting by order</a></li>
+        <li><a href="form.html">Knitting by order</a></li>
       </ul>
       <ul className="site__list" ref={this.menuDownListRef}>
         <li><img src="./img/icon_search.png" width="16px"/><a href="catalog.html">&nbsp; &nbsp;Search</a></li>
