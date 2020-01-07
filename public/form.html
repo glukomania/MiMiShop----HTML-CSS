@@ -42,92 +42,142 @@
 
 
       <div class="catalog-header">
-        <div class="catalog-header__wrapper">
-          <div class="catalog-header__slogan">
+        <div class="inner-header__wrapper">
+          <div class="inner-header__slogan">
             Order your eyecandy!
           </div>
         </div>
+        <div className="innerHeader-zigzag"></div>
       </div>
 
       
 
       <div class="form">
         <div class="form-wrapper">
-          <div class="form-top">
-            <div class="form-top_title">
-              We are happy to implement your ideas to life! Please fill in the form and we'll contact you for details.
+          <div class="form-top_title">
+            We are happy to implement your ideas to life! Please fill in the form and we'll contact you for details.
+          </div>
+          <div class="form-title">
+            <div class="form-title__header">
+              TYPE
             </div>
-            <div class="form-title">Type</div>
-            <div class="form-parameters">
-              <input type="radio" id="orderTypeInterier" name="orderType">
-              <label for="orderTypeInterier">Accessoir for an interier</label>
-
-              <input type="radio" id="orderToy" name="orderType">
-              <label for="orderToy">Toy for children</label>
+            <div class="form-line__wrapper">
+              <div class="form-line"></div>
             </div>
           </div>
+          <div class="form-parameters">
+            
+            <label class="radioButton"> Accessoir for an interier
+              <input type="radio" checked="checked" name="radio">
+              <span class="radio_mark"></span>
+            </label>
+            
+            <label class="radioButton"> Toy for children
+              <input type="radio" name="radio">
+              <span class="radio_mark"></span>
+            </label>
+          </div>
+        </div>
 
-          <div class="form-color">
-            <div class="form-title">Color</div>
-            <div class="form-parameters">
-              <input type="checkbox" id="color1" name="color">
-              <label for="color1">White</label>
-
-              <input type="checkbox" id="color2" name="color">
-              <label for="color2">Black</label>
-
-              <input type="checkbox" id="color3" name="color">
-              <label for="color3">Gray</label>
-
-              <input type="checkbox" id="color4" name="color">
-              <label for="color4">Pink</label>
-
-              <input type="checkbox" id="color5" name="color">
-              <label for="color5">Tiffany</label>
-
-              <input type="checkbox" id="color6" name="color">
-              <label for="color6">Corall</label>
+        <div class="form-wrapper oddBlock">
+          <div class="form-title">
+            <div class="form-title__header">
+              COLOR
+            </div>
+            <div class="form-line__wrapper">
+              <div class="form-line"></div>
             </div>
           </div>
+          <div class="form-parameters colors">
+            <label class="checkbox-container">White
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
 
-          <div class="form-personal">
-            <div class="form-title">Person</div>
-            <div class="form-parameters">
-              <label for="name">First name</label>
-              <input type="input" id="name" name="person">
+            <label class="checkbox-container">Black
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
 
-              <label for="lastName">Last name</label>
-              <input type="input" id="lastName" name="person">
+            <label class="checkbox-container">Grey
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="checkbox-container">Pink
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="checkbox-container">Tiffany
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="checkbox-container">Corall
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-wrapper">
+          <div class="form-title">
+            <div class="form-title__header">
+              PERSON
+            </div>
+            <div class="form-line__wrapper">
+              <div class="form-line"></div>
             </div>
           </div>
+          <div class="form-parameters">
+            <label for="name">First name</label>
+            <input type="input" id="name" name="person">
 
-          <div class="form-contacts">
-            <div class="contacts-wrapper">
-              <div class="form-title">Phone</div>
-              <div class="form-parameters">
-                <div class="form-parameters__wrapper">
-                  <input type="input" id="phone" placeholder="+420 111 222 333" name="contacts">
-                  <div class="form-parameters_icon"></div>
-                </div>
-                <div class="form-parameters__wrapper">
-                  <input type="input" id="email" placeholder="Your email" name="contacts">
-                  <div class="form-parameters_icon"></div>
-                </div>
+            <label for="lastName">Last name</label>
+            <input type="input" id="lastName" name="person">
+          </div>
+        </div>
+
+        <div class="form-wrapper oddBlock">
+          <div class="contacts-wrapper">
+            <div class="form-title">
+              <div class="form-title__header">
+                PHONE
+              </div>
+              <div class="form-line__wrapper">
+                <div class="form-line"></div>
+              </div>
+            </div>
+            <div class="form-parameters">
+              <div class="form-parameters__wrapper">
+                <input type="input" id="phone" placeholder="+420 111 222 333" name="contacts">
+                <div class="form-parameters_icon"></div>
+              </div>
+              <div class="form-parameters__wrapper">
+                <input type="input" id="email" placeholder="Your email" name="contacts">
+                <div class="form-parameters_icon"></div>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="form-addition">
-            <div class="form-title">Details</div>
-            <div class="form-parameters">
-              <input type="textarea" placeholder="Describe your wishes here" name="details">
-              <div class="options__wrapper">
-                <button type=submit">Submit your order</button>
-                <div class="note">*These fields are required to fill</div>
-              </div>
+        <div class="form-wrapper">
+          <div class="form-title">
+            <div class="form-title__header">
+              DETAILS
+            </div>
+            <div class="form-line__wrapper">
+              <div class="form-line"></div>
             </div>
           </div>
-
+          <div class="form-parameters">
+            <input type="textarea" placeholder="Describe your wishes here" name="details">
+            <div class="options__wrapper">
+              <button type=submit">Submit your order</button>
+              <div class="note">*These fields are required to fill</div>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -1,10 +1,12 @@
 const InnerHeader = (props) => {
   return <div className="catalog-header">
-  <div className="catalog-header__wrapper">
-    <div className="catalog-header__slogan">
+  <div className="inner-header__wrapper">
+    <div className="inner-header__slogan">
       {props.title}
     </div>
   </div>
+  <div class="innerHeader-zigzag"></div>
+  }
 </div>
 };
 

@@ -7,13 +7,13 @@
   background-size: cover; 
 }
 
-.catalog-header__wrapper {
+.inner-header__wrapper {
   background-color: #f1f1f1;
   height: 175px;
   display: flex;
 }
 
-.catalog-header__slogan {
+.inner-header__slogan {
   margin: 60px auto;
   text-align: center;
   font-size: 27px;
@@ -87,9 +87,6 @@
   padding: 25px;
 }
 
-.header-zigzag {
-}
-
 @media (min-width: @tablet-width) {
 
   .header-wrapper {
@@ -126,6 +123,16 @@
   .header-zigzag {
     position: absolute;
     top: 804px;
+    left: 0;
+    content: url("../img/zigzag.png");
+    width: 100%;
+    z-index: 2;
+  }
+
+  .innerHeader-zigzag {
+    background-color: red;
+    position: absolute;
+    top: 300px;
     left: 0;
     content: url("../img/zigzag.png");
     width: 100%;
