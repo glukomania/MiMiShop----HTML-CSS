@@ -6,6 +6,8 @@ import Feedbacks from '../feedbacks/feedbacks';
 import Contacts from '../contacts/contacts';
 import Footer from '../footer/footer';
 
+import SearchModal from '../search/searchModal';
+
 class Main extends React.PureComponent {
   constructor(props) {
     super();
@@ -17,6 +19,8 @@ class Main extends React.PureComponent {
     <Menu />
 
     <Header />
+
+    <SearchModal />
 
     <Offer />
 

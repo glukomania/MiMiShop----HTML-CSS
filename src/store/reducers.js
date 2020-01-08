@@ -1,19 +1,31 @@
 const initialState = {
-  test: ``,
+  isSearchVisible: false,
 }
 
 export const ActionCreator = {
-  test: (lang) => ({
-    type: `DO_SOMETHING`,
-    payload: takeDataByLand(lang),
+  openSearchModal: () => ({
+    type: `OPEN_SEARCH`,
+    payload: true,
+  }),
+
+  closeSearchModal: () => ({
+    type: `CLOSE_SEARCH`,
+    payload: false,
   }),
 }
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case `DO_SOMETHING`: return Object.assign({}, state, {
-      test: action.payload,
+    case `OPEN_SEARCH`: return Object.assign({}, state, {
+      isSearchVisible: action.payload,
     });
+
+    case `CLOSE_SEARCH`: return Object.assign({}, state, {
+      isSearchVisible: action.payload,
+    });
+
+    default: 
+      return state;
   };
 
   return state;

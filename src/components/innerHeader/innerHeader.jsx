@@ -5,8 +5,7 @@ const InnerHeader = (props) => {
       {props.title}
     </div>
   </div>
-  <div class="innerHeader-zigzag"></div>
-  }
+  <div className="innerHeader-zigzag"></div>
 </div>
 };
 

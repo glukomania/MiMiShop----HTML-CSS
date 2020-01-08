@@ -2,6 +2,7 @@ import Menu from '../menu/menu';
 import InnerHeader from '../innerHeader/innerHeader';
 import Item from '../item/item';
 import Footer from '../footer/footer';
+import {mockProducts} from '../../mockdata';
 
 
 class Catalog extends React.PureComponent {
@@ -16,7 +17,7 @@ class Catalog extends React.PureComponent {
 
       <div className="items-list">
         <div className="list-wrapper">
-          <Item />
+          {mockProducts.map((item, index) => <Item key={index} product={item}/>)}
         </div>
       </div>
 

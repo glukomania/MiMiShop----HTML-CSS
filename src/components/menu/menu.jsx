@@ -1,4 +1,6 @@
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {ActionCreator} from '../../store/reducers';
 
 class Menu extends React.PureComponent {
   constructor() {
@@ -12,6 +14,7 @@ class Menu extends React.PureComponent {
     }
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
+    this.handlerSearchModal = this.handlerSearchModal.bind(this);
   }
 
   handleMenuClick() {
@@ -28,6 +31,10 @@ class Menu extends React.PureComponent {
       this.menuDownListRef.current.style.display = `block`;
       this.setState({isOpened: true});
     }
+  }
+
+  handlerSearchModal() {
+    this.props.openSearchModal();
   }
 
   render() {
@@ -50,11 +57,11 @@ class Menu extends React.PureComponent {
       </div>
       <ul className="main-nav__list" ref={this.menuUpperListRef}>
         <li><Link to="/catalog">Our products</Link></li>
-        <li><a href="form.html">Knitting by order</a></li>
+        <li><Link to="/Order">Knitting by order</Link></li>
       </ul>
       <ul className="site__list" ref={this.menuDownListRef}>
-        <li><img src="./img/icon_search.png" width="16px"/><a href="catalog.html">&nbsp; &nbsp;Search</a></li>
-        <li><img src="./img/icon_basket.png" width="16px"/><a href="catalog.html">&nbsp; &nbsp;Your basket is empty</a></li>
+        <li onClick={this.handlerSearchModal}><img src="./img/icon_search.png" width="16px"/>&nbsp; &nbsp;Search</li>
+        <li><img src="./img/icon_basket.png" width="16px"/>&nbsp; &nbsp;Your basket is empty</li>
       </ul>
     </div>
   </nav>
@@ -62,4 +69,14 @@ class Menu extends React.PureComponent {
   }
 }
 
-export default Menu;
+const mapStateToDispatch = (state, ownProps) => Object.assign({}, ownProps, {
+  isSearchVisible: state.isSearchVisible,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  openSearchModal: () => {
+    dispatch(ActionCreator.openSearchModal());
+  }
+});
+
+export default connect(mapStateToDispatch, mapDispatchToProps)(Menu);

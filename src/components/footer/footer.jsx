@@ -1,8 +1,10 @@
+import {NavLink} from 'react-router-dom';
+
 const Footer = () => {
 
   return <div className="page-footer">
     <div className="footer-logo">
-      <div className="footer-logo__image"></div>
+      <NavLink to="/"><div className="footer-logo__image"></div></NavLink>
     </div>
     <div className="footer-social">
       <div className="footer-social__wrapper">
