@@ -55,7 +55,9 @@
       <div class="form">
         <div class="form-wrapper">
           <div class="form-top_title">
-            We are happy to implement your ideas to life! Please fill in the form and we'll contact you for details.
+            We are happy to implement your ideas to life! Describe as full as possible your vision of the product you want,
+            and we'll provide you our drafts as soon as possible. <br />
+            Please fill in the form and we'll contact you for more details.
           </div>
           <div class="form-title">
             <div class="form-title__header">
@@ -131,37 +133,41 @@
             </div>
           </div>
           <div class="form-parameters">
-            <label for="name" class="label parameters_input">First name:
-              <input class="form_input" type="input" id="name" name="person" placeholder="Type your first name">
+            <label for="name" class="label parameters_input">
+              <div class="person__label">First name:</div>
+              <div class="form-input__wrapper">
+                <input class="form_input" type="input" id="name" name="person" placeholder="Type your first name">
+              </div>  
             </label>
             
 
-            <label for="lastName" class="label parameters_input">Last name:
-              <input class="form_input" type="input" id="lastName" name="person" placeholder="Type your last name">
+            <label for="lastName" class="label parameters_input">
+              <div class="person__label">Last name:</div>
+              <div class="form-input__wrapper">
+                <input class="form_input" type="input" id="lastName" name="person" placeholder="Type your last name">
+              </div>
             </label>
             
           </div>
         </div>
 
         <div class="form-wrapper oddBlock">
-          <div class="contacts-wrapper">
-            <div class="form-title">
-              <div class="form-title__header">
-                PHONE
-              </div>
-              <div class="form-line__wrapper">
-                <div class="form-line"></div>
-              </div>
+          <div class="form-title">
+            <div class="form-title__header">
+              CONTACTS
             </div>
-            <div class="form-parameters">
-              <div class="form-parameters__wrapper">
-                <input type="input" id="phone" placeholder="+420 111 222 333" name="contacts">
-                <div class="form-parameters_icon"></div>
-              </div>
-              <div class="form-parameters__wrapper">
-                <input type="input" id="email" placeholder="Your email" name="contacts">
-                <div class="form-parameters_icon"></div>
-              </div>
+            <div class="form-line__wrapper">
+              <div class="form-line"></div>
+            </div>
+          </div>
+          <div class="form-parameters">
+            <div class="form-parameters__wrapper">
+              <input class="person_input" type="input" id="phone" placeholder="+420 111 222 333" name="contacts">
+              <div class="form-parameters_icon"></div>
+            </div>
+            <div class="form-parameters__wrapper">
+              <input class="person_input" type="input" id="email" placeholder="Your email" name="contacts">
+              <div class="form-parameters_icon"></div>
             </div>
           </div>
         </div>
@@ -176,9 +182,11 @@
             </div>
           </div>
           <div class="form-parameters">
-            <input type="textarea" placeholder="Describe your wishes here" name="details">
+            <textarea class="details-textarea" rows="5" placeholder="Describe your wishes here" name="details"></textarea>
             <div class="options__wrapper">
-              <button type=submit">Submit your order</button>
+              <div class="order-btn__wrapper">
+                <button class="order_btn" type=submit">Submit your order</button>
+              </div>
               <div class="note">*These fields are required to fill</div>
             </div>
           </div>
