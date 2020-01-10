@@ -6,11 +6,11 @@ module.exports = {
   entry: `./src/index.js`,
   output: {
     filename: `bundle.js`,
-    path: path.join(__dirname, `public`),
+    path: path.join(__dirname, `docs`),
     publicPath: '/',
   },
   devServer: {
-    contentBase: path.join(__dirname, `public`),
+    contentBase: path.join(__dirname, `docs`),
     compress: false,
     open: true,
     port: 1337,
@@ -37,7 +37,7 @@ module.exports = {
   resolve: {
     modules: [
       `node_modules`,
-      path.resolve(path.join(__dirname, `public`))
+      path.resolve(path.join(__dirname, `docs`))
     ],
     extensions: [`.js`, `.jsx`, `.ts`, `.tsx`, `.webm`],
   },
