@@ -3,6 +3,7 @@ import InnerHeader from '../innerHeader/innerHeader';
 import Item from '../item/item';
 import Footer from '../footer/footer';
 import {mockProducts} from '../../mockdata';
+import SearchModal from '../search/searchModal';
 
 
 class Catalog extends React.PureComponent {
@@ -14,6 +15,8 @@ class Catalog extends React.PureComponent {
     return <div className="page-wrapper">
       <Menu />
       <InnerHeader title={`Catalog of our production`} />
+
+      <SearchModal />
 
       <div className="items-list">
         <div className="list-wrapper">

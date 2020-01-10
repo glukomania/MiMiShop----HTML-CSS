@@ -1,4 +1,4 @@
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {ActionCreator} from '../../store/reducers';
 
@@ -61,7 +61,7 @@ class Menu extends React.PureComponent {
       </ul>
       <ul className="site__list" ref={this.menuDownListRef}>
         <li onClick={this.handlerSearchModal}><img src="./img/icon_search.png" width="16px"/>&nbsp; &nbsp;Search</li>
-        <li><img src="./img/icon_basket.png" width="16px"/>&nbsp; &nbsp;Your basket is empty</li>
+        <li><NavLink to="/basket"><img src="./img/icon_basket.png" width="16px"/>&nbsp; &nbsp;No items</NavLink></li>
       </ul>
     </div>
   </nav>

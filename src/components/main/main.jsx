@@ -14,25 +14,27 @@ class Main extends React.PureComponent {
   }
 
   render() {
-    return <div className="page-wrapper">
-      
-    <Menu />
+    return <div>
+    <div className="page-wrapper">
+        
+      <Menu />
 
-    <Header />
+      <Header />
 
-    <SearchModal />
+      <SearchModal />
 
-    <Offer />
+      <Offer />
 
-    <div className="offer-derive"></div>
+      <div className="offer-derive"></div>
 
-    <About />
+      <About />
 
-    <Feedbacks />
+      <Feedbacks />
 
-    <div className="offer-derive"></div>
+      <div className="offer-derive"></div>
 
-    <Contacts />
+      <Contacts />
+    </div>
 
     <Footer />
 

@@ -1,15 +1,17 @@
 import Menu from '../menu/menu';
 import InnerHeader from '../innerHeader/innerHeader';
 import Footer from '../footer/footer';
+import SearchModal from '../search/searchModal';
 
 class Order extends React.PureComponent {
-
-
 
   render() {
     return <div>
       <Menu />
       <InnerHeader title="Knitting by order"/>
+
+      <SearchModal />
+
     <div className="form">
     <div className="form-wrapper">
       <div className="form-top_title">
@@ -155,6 +157,7 @@ class Order extends React.PureComponent {
   </div>
 
   }
+
 }
 
 
