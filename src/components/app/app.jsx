@@ -8,6 +8,7 @@ import Basket from '../basket/basket';
 
 
 const App = () => {
+  console.log('im in app');
   return <Router>
       <Switch>
         <Route path="/" exact component={Main} />
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/order" exact component={Order} />
         <Route path="/search" exact component={Search} />
         <Route path="/basket" exact component={Basket} />
+        <Route render={() => <div style={{textAlign: `center`, fontSize: `70px`, padding: `100px 60px`, color: `#ccc`}}>Page not found</div>} />
       </Switch>
     </Router>
 }

@@ -6,6 +6,7 @@ import {reducer} from './store/reducers';
 import App from './components/app/app.jsx';
 
 const init = () => {
+  console.log(`i'm here`);
   const store = createStore(reducer);
 
   ReactDOM.render(<Provider store={store}>

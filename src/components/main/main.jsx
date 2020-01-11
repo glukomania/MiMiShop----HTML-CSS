@@ -14,6 +14,7 @@ class Main extends React.PureComponent {
   }
 
   render() {
+    console.log('im in Main')
     return <div>
     <div className="page-wrapper">
         
