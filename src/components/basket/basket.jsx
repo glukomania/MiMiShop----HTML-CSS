@@ -1,5 +1,3 @@
-import { PureComponent } from "react";
-
 import Menu from '../menu/menu';
 import InnerHeader from '../innerHeader/innerHeader';
 import Footer from '../footer/footer';
@@ -8,13 +6,28 @@ import {mockProducts} from '../../mockdata';
 import SearchModal from '../search/searchModal';
 import BasketItem from './basket-item';
 
-class Basket extends PureComponent {
+import {connect} from 'react-redux';
+
+
+class Basket extends React.PureComponent {
   constructor(props) {
     super();
   }
 
 
   render() {
+
+    const isSelected = (item, array) => {
+      for (let i = 0; i < array.length; i++) {
+        if (item.id === array[i]) {
+          return true;
+        }
+      }
+      return false;
+    }
+    const selectedItems = this.props.allProducts.filter((item) => isSelected(item, this.props.selectedItems));
+    
+
     return <div className="page-wrapper">
       <Menu />
       <InnerHeader title="Your basket" />
@@ -24,7 +37,7 @@ class Basket extends PureComponent {
 
           <div className="basket-counter">There are N items in your basket:</div>
 
-          {mockProducts.map((item, index) => <BasketItem item={item} key={index}/>)}
+          {selectedItems.map((item, index) => <BasketItem item={item} key={index}/>)}
 
           <div className="basket-options">
             <div className="options-price">
@@ -44,5 +57,15 @@ class Basket extends PureComponent {
   }
 }
 
+const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
+  allProducts: state.allProducts,
+  selectedItems: state.selectedItems,
 
-export default Basket;
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Basket);

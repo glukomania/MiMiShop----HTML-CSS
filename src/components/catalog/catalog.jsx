@@ -2,8 +2,9 @@ import Menu from '../menu/menu';
 import InnerHeader from '../innerHeader/innerHeader';
 import Item from '../item/item';
 import Footer from '../footer/footer';
-import {mockProducts} from '../../mockdata';
 import SearchModal from '../search/searchModal';
+
+import {connect} from 'react-redux';
 
 
 class Catalog extends React.PureComponent {
@@ -12,6 +13,7 @@ class Catalog extends React.PureComponent {
   }
 
   render() {
+
     return <div className="page-wrapper">
       <Menu />
       <InnerHeader title={`Catalog of our production`} />
@@ -20,7 +22,7 @@ class Catalog extends React.PureComponent {
 
       <div className="items-list">
         <div className="list-wrapper">
-          {mockProducts.map((item, index) => <Item key={index} product={item}/>)}
+          {this.props.allProducts.map((item, index) => <Item key={index} product={item}/>)}
         </div>
       </div>
 
@@ -29,4 +31,13 @@ class Catalog extends React.PureComponent {
   }
 }
 
-export default Catalog;
+const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
+  allProducts: state.allProducts,
+  selectedItems: state.selectedItems,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Catalog);

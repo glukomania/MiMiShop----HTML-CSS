@@ -37,12 +37,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glukomania/MishkaShop----HTML-CSS.git"
+    "url": "git+https://github.com/glukomania/MiMiShop----HTML-CSS.git"
   },
   "author": "Natalia Shuvaeva",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/glukomania/MishkaShop----HTML-CSS/issues"
+    "url": "https://github.com/glukomania/MiMiShop----HTML-CSS/issues"
   },
   "homepage": "https://glukomania.github.io/MiMiShop----HTML-CSS/"
 }
