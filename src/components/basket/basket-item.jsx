@@ -1,4 +1,6 @@
 import { PureComponent } from "react";
+import {connect} from 'react-redux';
+import {ActionCreator} from '../../store/reducers';
 
 class BasketItem extends PureComponent {
   constructor(props) {
@@ -24,6 +26,11 @@ class BasketItem extends PureComponent {
     }
   }
 
+  handleClose() {
+    this.props.removeItem(this.props.selectedItems, this.props.item.id);
+
+  }
+
   render() {
     return <div className="basket-item">
     <div className="basItem-image">
@@ -32,7 +39,7 @@ class BasketItem extends PureComponent {
     <div className="basItem-details">
       <div className="basItem-title">
         <div className="basItem-title_header">{this.props.item.title}</div>
-        <div className="basItem-title_close"></div>
+        <div className="basItem-title_close" onClick={this.handleClose.bind(this)}></div>
       </div>
       <div className="basItem-options">
         <div className="basItem-price">Price: {this.props.item.price}</div>
@@ -47,4 +54,14 @@ class BasketItem extends PureComponent {
   }
 }
 
-export default BasketItem;
+const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
+  selectedItems: state.selectedItems,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  removeItem: (basketArray, id) => {
+    dispatch(ActionCreator.removeItem(basketArray, id));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(BasketItem);

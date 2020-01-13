@@ -8,7 +8,6 @@ import {mockProducts} from '../src/mockdata';
 
 
 const init = () => {
-  console.log(`i'm here`);
   const store = createStore(reducer);
 
   ReactDOM.render(<Provider store={store}>

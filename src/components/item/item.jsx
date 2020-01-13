@@ -11,11 +11,9 @@ class Item extends React.PureComponent{
 
   handleBasketClick() {
     this.props.addItem(this.props.selectedItems, this.props.product.id);
-    console.log(this.props.selectedItems);
   }
 
   render() {
-    console.log(this.props.selectedItems)
   return <div className="item">
   <div className="item-picture">
     <img className="item-picture_img"src={this.props.product.image} />
@@ -46,8 +44,8 @@ const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (basketArray, id) => {
-    dispatch(ActionCreator.selectItem(basketArray, id));
-  }
+    dispatch(ActionCreator.addItem(basketArray, id));
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Item);

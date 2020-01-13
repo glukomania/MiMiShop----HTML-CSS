@@ -20,9 +20,14 @@ export const ActionCreator = {
     payload: false,
   }),
 
-  selectItem: (array, id) => ({
+  addItem: (array, id) => ({
     type: `SELECT_ITEM`,
     payload: addItem(array, id),
+  }),
+
+  removeItem: (array, id) => ({
+    type: `REMOVE_ITEM`,
+    payload: removeItem(array, id),
   })
 }
 
@@ -44,15 +49,27 @@ export const reducer = (state = initialState, action) => {
       selectedItems: action.payload,
     });
 
+    case `REMOVE_ITEM`: return Object.assign({}, state, {
+      selectedItems: action.payload,
+    });
+
     default: 
       return state;
   };
 }
 
 const addItem = (array, value) => {
-  if (!array.find((item) => item === value)) {
-    array.push(value);
+  const copyOfArray = [...array];
+  if (!copyOfArray.find((item) => item === value)) {
+    copyOfArray.push(value);
   }
   
-  return array;
+  return copyOfArray;
+}
+
+const removeItem = (array, value) => {
+  const copyOfArray = [...array];
+  copyOfArray.splice(copyOfArray.findIndex((item) => item === value), 1);
+  
+  return copyOfArray;
 }

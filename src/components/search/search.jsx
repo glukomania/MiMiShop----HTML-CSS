@@ -6,7 +6,7 @@ import SearchModal from '../search/searchModal';
 class Search extends React.PureComponent {
 
   render() {
-    return <div class="page-wrapper">
+    return <div className="page-wrapper">
     <Menu />
     <InnerHeader title="Search results"/>
 

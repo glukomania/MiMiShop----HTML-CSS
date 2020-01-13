@@ -14,8 +14,6 @@ class App extends React.PureComponent {
   render() {
   this.props.saveAllProducts(this.props.products);
 
-  console.log(this.props.allProducts);
-
   return <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Main} />

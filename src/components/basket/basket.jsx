@@ -2,7 +2,6 @@ import Menu from '../menu/menu';
 import InnerHeader from '../innerHeader/innerHeader';
 import Footer from '../footer/footer';
 
-import {mockProducts} from '../../mockdata';
 import SearchModal from '../search/searchModal';
 import BasketItem from './basket-item';
 
@@ -35,7 +34,7 @@ class Basket extends React.PureComponent {
       <div className="basket-container">
         <div className="basket-wrapper">
 
-          <div className="basket-counter">There are N items in your basket:</div>
+          <div className="basket-counter">There are {this.props.selectedItems.length} items in your basket:</div>
 
           {selectedItems.map((item, index) => <BasketItem item={item} key={index}/>)}
 
