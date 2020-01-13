@@ -1,8 +1,7 @@
-import { PureComponent } from "react";
 import {connect} from 'react-redux';
 import {ActionCreator} from '../../store/reducers';
 
-class BasketItem extends PureComponent {
+class BasketItem extends React.PureComponent {
   constructor(props) {
     super();
     this.item = props.item;

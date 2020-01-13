@@ -61,7 +61,7 @@ class Menu extends React.PureComponent {
       </ul>
       <ul className="site__list" ref={this.menuDownListRef}>
         <li onClick={this.handlerSearchModal}><img src="./img/icon_search.png" width="16px"/>&nbsp; &nbsp;Search</li>
-  <li><NavLink to="/basket"><img src="./img/icon_basket.png" width="16px"/>&nbsp; &nbsp;{this.props.selectedItems.length === 0 ? `No items` : this.props.selectedItems.length + ` items in your basket`}</NavLink></li>
+  <li><NavLink to="/basket"><img src="./img/icon_basket.png" width="16px"/>&nbsp; &nbsp;{this.props.selectedItems.length === 0 ? `The basket is empty` : this.props.selectedItems.length + ` items in your basket`}</NavLink></li>
       </ul>
     </div>
   </nav>
