@@ -14,7 +14,7 @@ class App extends React.PureComponent {
   render() {
   this.props.saveAllProducts(this.props.products);
 
-  return <BrowserRouter>
+  return <BrowserRouter basename="/MiMiShop----HTML-CSS" >
       <Switch>
         <Route path="/" exact component={Main} />
         <Route path="/catalog" exact component={Catalog} />
