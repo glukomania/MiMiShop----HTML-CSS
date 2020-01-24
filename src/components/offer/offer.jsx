@@ -1,5 +1,19 @@
-const Offer = () => {
+import {connect} from 'react-redux';
+import {ActionCreator} from '../../store/reducers';
 
+class Offer extends React.PureComponent {
+
+  constructor(props) {
+    super();
+    this.handleOrder = this.handleOrder.bind(this);
+  }
+
+  handleOrder() {
+    console.log(`im adding`);
+    this.props.addItem(this.props.selectedItems, 8);
+  }
+
+  render() {
   return <div className="page-offer">
   <div className="offer-wrapper">
     <div className="offer-title">
@@ -45,11 +59,21 @@ const Offer = () => {
         Price: 15€
       </div>
       <div className="offer-price__order">
-        <input type="submit" className="order__button" value="ORDER NOW" />
+        <input type="submit" className="order__button" value="ORDER NOW" onClick={this.handleOrder}/>
       </div>
     </div>
   </div>
 </div>
+  }
 };
+const mapStateToProps = (state, ownProps) => Object.assign({}, ownProps, {
+  selectedItems: state.selectedItems,
+});
 
-export default Offer;
+const mapDispatchToProps = (dispatch) => ({
+  addItem: (basketArray, id) => {
+    dispatch(ActionCreator.addItem(basketArray, id));
+  },
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Offer);

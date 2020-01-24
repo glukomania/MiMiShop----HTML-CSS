@@ -2,6 +2,7 @@ const initialState = {
   allProducts: [],
   isSearchVisible: false,
   selectedItems: [],
+  userData: [],
 }
 
 export const ActionCreator = {
@@ -28,6 +29,11 @@ export const ActionCreator = {
   removeItem: (array, id) => ({
     type: `REMOVE_ITEM`,
     payload: removeItem(array, id),
+  }), 
+
+  setUserData: (userData) => ({
+    type: `SET_USER_DATA`,
+    payload: userData,
   })
 }
 
@@ -51,6 +57,10 @@ export const reducer = (state = initialState, action) => {
 
     case `REMOVE_ITEM`: return Object.assign({}, state, {
       selectedItems: action.payload,
+    });
+
+    case `SET_USER_DATA`: return Object.assign({}, state, {
+      userData: action.payload,
     });
 
     default: 

@@ -1,6 +1,7 @@
 import {Link, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {ActionCreator} from '../../store/reducers';
+import Axios from 'axios';
 
 class Menu extends React.PureComponent {
   constructor() {
@@ -9,8 +10,7 @@ class Menu extends React.PureComponent {
     this.menuUpperListRef = React.createRef();
     this.menuDownListRef = React.createRef();
 
-    this.state = {
-      isOpened: false,
+    this.state = {isOpened: false,
     }
 
     this.handleMenuClick = this.handleMenuClick.bind(this);
@@ -35,6 +35,9 @@ class Menu extends React.PureComponent {
 
   handlerSearchModal() {
     this.props.openSearchModal();
+  }
+
+  componentDidMount(){
   }
 
   render() {

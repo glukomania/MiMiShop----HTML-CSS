@@ -26,7 +26,7 @@ class Item extends React.PureComponent{
       </div>
       <div className="item-detailes-options">
         <div className="item-detailes-option__price">
-          Price: {this.props.product.price}
+          Price: {this.props.product.price}€
         </div>
         <div className="item-detailes-option__icon">
           <div className="item-detailes-option__basket" onClick={this.handleBasketClick}></div>

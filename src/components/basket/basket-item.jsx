@@ -41,7 +41,7 @@ class BasketItem extends React.PureComponent {
         <div className="basItem-title_close" onClick={this.handleClose.bind(this)}></div>
       </div>
       <div className="basItem-options">
-        <div className="basItem-price">Price: {this.props.item.price}</div>
+        <div className="basItem-price">Price: {this.props.item.price}€</div>
         <div className="basItem-quantity">
           <div className="btn-minus"><button className="btn-minus__btn btn" onClick={this.handleMinusClick.bind(this)}>-</button></div>
           <div><input type="text" className="quantity_input" maxLength="1" value={this.state.quantity} onChange={this.handleQuantityChange.bind(this)}/></div>

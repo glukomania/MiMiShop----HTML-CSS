@@ -4,7 +4,7 @@ export const mockProducts = [
     type: `toy`,
     title: `The Rabbit Bob`,
     parameters: `Height 30cm, weight 200g`,
-    price: `15€`,
+    price: 15,
     image: `./img/photo-1-desktop.jpg`
   },
   {
@@ -12,7 +12,7 @@ export const mockProducts = [
     type: `toy`,
     title: `The Bear Brayan`,
     parameters: `Height 20cm, weight 100g`,
-    price: `10€`,
+    price: 10,
     image: `./img/photo-2.jpg`
   },
   {
@@ -20,7 +20,7 @@ export const mockProducts = [
     type: `toy`,
     title: `The Fox Nanny`,
     parameters: `Height 22cm, weight 140g`,
-    price: `18€`,
+    price: 18,
     image: `./img/photo-3.jpg`
   },
   {
@@ -28,7 +28,7 @@ export const mockProducts = [
     type: `interier`,
     title: `The owl baskets`,
     parameters: `Radius 20cm, weight 100g, 2 items`,
-    price: `26€`,
+    price: 26,
     image: `./img/photo-4.jpg`
   },
   {
@@ -36,7 +36,7 @@ export const mockProducts = [
     type: `interier`,
     title: `Pens saver`,
     parameters: `Width 25cm, height 22 cm, for 10 pens`,
-    price: `31€`,
+    price: 31,
     image: `./img/photo-5.jpg`
   },
   {
@@ -44,8 +44,20 @@ export const mockProducts = [
     type: `interier`,
     title: `Candle warmer`,
     parameters: `Height 12 cm`,
-    price: `15€`,
+    price: 15,
     image: `./img/photo-6.jpg`
   },
+
+  {
+    id: 8,
+    type: `interier`,
+    title: `Nice knitted baskets`,
+    parameters: `Eco wool, handmade. Available with six colors and three sizes.`,
+    price: 15,
+    Color: `Tiffany/gray`,
+    Diameter: `25sm`,
+    Height: `15sm`,
+    image: `./img/triple-set-desktop.jpg`
+  }
   
 ]
